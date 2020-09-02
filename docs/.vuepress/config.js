@@ -1,4 +1,5 @@
 const moment = require('moment');
+moment.locale('zh-cn')
 
 module.exports = {
   title: 'mrxinxin',
@@ -13,8 +14,7 @@ module.exports = {
       {
         transformer: (timestamp, lang) => {
           // 不要忘了安装 moment
-          moment.locale(lang)
-          return moment(timestamp).fromat('LLLL')
+          return moment(timestamp).format('LLLL')
         }
       }
     ]
